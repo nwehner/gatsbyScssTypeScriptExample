@@ -1,0 +1,140 @@
+html {
+	line-height: 1.5;
+}
+
+body,
+input {
+	font-family: $fontBody;
+	font-weight: $fontWeightBody;
+	color: $colorBody;
+}
+
+h1 {
+	font-family: $fontHeading;
+	font-weight: $fontWeightHeading;
+	margin: 1rem 0;
+	font-size: 3rem;
+	line-height: 1.25;
+	color: $colorOrange;
+	~ h2,
+	~ h3,
+	~ h4,
+	~ h5,
+	~ h6 {
+		margin-top: 2rem;
+	}
+	strong {
+		font-weight: $fontWeightHeadingBold;
+	}
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $fontBody;
+	font-weight: $fontWeightHeading;
+	margin: 0.25rem 0;
+	line-height: 1.5;
+	color: $colorBody;
+	strong {
+		font-weight: $fontWeightHeadingBold;
+	}
+}
+
+h2 {
+	font-size: 1.75rem;
+	~ h3,
+	~ h4,
+	~ h5,
+	~ h6 {
+		margin-top: 2rem;
+	}
+}
+
+h3 {
+	font-size: 1.5rem;
+	~ h4,
+	~ h5,
+	~ h6 {
+		margin-top: 2rem;
+	}
+}
+
+h4 {
+	font-size: 1.25rem;
+	~ h5,
+	~ h6 {
+		margin-top: 2rem;
+	}
+}
+
+h5 {
+	font-size: 1.17rem;
+	~ h6 {
+		margin-top: 2rem;
+	}
+}
+
+h6 {
+	font-size: 1.09rem;
+}
+
+p {
+	margin: 1rem auto;
+	~ h2,
+	~ h3 {
+		margin-top: 2rem;
+	}
+}
+
+li + li {
+	margin-top: 0.5rem;
+}
+
+blockquote {
+	border-left: 0.4rem solid $colorOrange;
+	padding: 0.1rem 0 0.1rem 2rem;
+	margin: 1rem 2rem;
+}
+
+strong,
+.strong {
+	font-weight: $fontWeightBodyBold;
+}
+
+.emphasis {
+	font-style: italic;
+}
+
+// Links
+a {
+	text-decoration: none;
+	color: $colorBlue;
+	&:active {
+		color: $colorOrange;
+	}
+	&:visited {
+		color: $colorPurple;
+	}
+	&:hover {
+		box-shadow: 0 0 0.2rem $colorGreen;
+		border-radius: 0.5rem;
+	}
+	// Ensure links can break.
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	-ms-word-break: break-all;
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.form a,
+.form a:link,
+.form a:visited,
+.form a:active {
+	color: $colorBody;
+}

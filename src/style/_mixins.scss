@@ -1,0 +1,63 @@
+// Breakpoints
+@mixin forSize($range) {
+  $phone-upper-boundary: 600px;
+  $tablet-portrait-upper-boundary: 900px;
+  $tablet-landscape-upper-boundary: 1200px;
+  $desktop-upper-boundary: 1800px;
+
+  @if $range == phoneOnly {
+    @media (max-width: #{$phone-upper-boundary - 1}) {
+      @content;
+    }
+  } @else if $range == tabletPortrait {
+    @media (min-width: $phone-upper-boundary) {
+      @content;
+    }
+  } @else if $range == tabletLandscape {
+    @media (min-width: $tablet-portrait-upper-boundary) {
+      @content;
+    }
+  } @else if $range == desktop {
+    @media (min-width: $tablet-landscape-upper-boundary) {
+      @content;
+    }
+  } @else if $range == bigDesktop {
+    @media (min-width: $desktop-upper-boundary) {
+      @content;
+    }
+  }
+}
+
+// Box shadowing
+@mixin boxShadow($values) {
+  box-shadow: $values;
+  -webkit-box-shadow: $values;
+}
+
+// Grid Layout
+@mixin gridEqual($grids) {
+	display: grid;
+	grid-template-columns: repeat($grids, 1fr);
+}
+
+@mixin gridDuo() {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+@mixin gridGutter($gutterWidth, $grids) {
+	display: grid;
+	grid-template-columns: $gutterWidth repeat($grids, 1fr) $gutterWidth;
+}
+
+@mixin gridGap($grids, $rowGap, $columnGap) {
+	display: grid;
+	grid-template-columns: repeat($grids, 1fr);
+	row-gap: $rowGap;
+	column-gap: $columnGap;
+}
+
+@mixin gridFillColumns($columnWidth) {
+	display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($columnWidth, 1fr));
+}

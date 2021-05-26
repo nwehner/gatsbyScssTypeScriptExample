@@ -1,0 +1,53 @@
+// Imports Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+// Normalize
+@import "./node_modules/normalize-scss/sass/normalize.scss";
+@include normalize();
+
+// Partials
+@import "variables";
+@import "mixins";
+@import "typography";
+
+// Correct common style issues
+html, body {
+	// Fix issues with iOS mobile, where in portrait mode, we could scroll off-canvas to the right about 20rem
+	height: initial;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	// Should remove the need for clearfix hacks.
+	display: flow-root;
+	// Color
+	background-color: $colorBlueLight;
+}
+
+// Main content
+.main {
+	display: grid;
+	grid-template-columns: 1fr min(70%) 1fr;
+	grid-auto-flow: row;
+	& > * {
+		grid-column: 2;
+	}
+}
+
+// Logo
+.logo {
+	max-width: 100%;
+	max-height: 10rem;
+	height: auto;
+	width: auto;
+}
+.responsiveImageWrapper {
+	width: 100%;
+}
+
+// Water image
+.water {
+	width: 100%;
+	height: auto;
+}

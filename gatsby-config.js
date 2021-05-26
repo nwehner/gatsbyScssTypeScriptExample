@@ -43,7 +43,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/images/SiphonophoraeLogo.svg`,
+        icon: `src/images/logo.svg`,
       },
     },
 		`gatsby-plugin-sitemap`,
