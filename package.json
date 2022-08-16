@@ -21,7 +21,7 @@
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-plugin-typescript": "^3.0.0",
-    "gatsby-source-filesystem": "^3.0.0"
+    "gatsby-source-filesystem": "^4.21.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
